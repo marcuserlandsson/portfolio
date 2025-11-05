@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marcus Erlandsson - Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="nav-container">
+        <div class="nav-logo">Marcus Erlandsson</div>
+        <ul class="nav-links">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section with Project Grid -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Development Portfolio</h1>
+        <p class="hero-subtitle">Showcasing my projects and development work</p>
+      </div>
+      <div class="project-grid" id="projectGrid">
+        <!-- Project tiles will be dynamically generated -->
+        <!-- Placeholder structure - replace with actual project data -->
+        <div class="project-tile">
+          <video class="tile-media" autoplay loop muted playsinline>
+            <source src="img/fluffy.mp4" type="video/mp4" />
+          </video>
+          <div class="tile-overlay">
+            <h3 class="tile-title">Fluffy's Revenge</h3>
+          </div>
+        </div>
+        <!-- Add more tiles as you add more projects -->
+        <!-- Example structure for additional projects:
+            <div class="project-tile">
+                <img class="tile-media" src="img/project2.gif" alt="Project 2">
+                <div class="tile-overlay">
+                    <h3 class="tile-title">Project Name</h3>
+                </div>
+            </div>
+            -->
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-list">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-card-media">
+              <video class="project-video" autoplay loop muted playsinline>
+                <source src="img/fluffy.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="project-card-content">
+              <h3 class="project-card-title">Fluffy's Revenge</h3>
+              <p class="project-card-description">
+                A game project showcasing my development skills. Built with
+                modern game development technologies and featuring engaging
+                gameplay mechanics.
+              </p>
+              <div class="project-card-tags">
+                <span class="tag">Game Development</span>
+                <span class="tag">Unity</span>
+                <span class="tag">C#</span>
+              </div>
+              <div class="project-card-links">
+                <a
+                  href="https://anakode.itch.io/fluffys-revenge"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-primary"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Add more project cards here as you develop more projects -->
+          <!-- Template for additional projects:
+                <article class="project-card">
+                    <div class="project-card-media">
+                        <img class="project-image" src="img/project2.gif" alt="Project 2">
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-card-title">Project Name</h3>
+                        <p class="project-card-description">
+                            Description of your project here.
+                        </p>
+                        <div class="project-card-tags">
+                            <span class="tag">Technology</span>
+                            <span class="tag">Framework</span>
+                        </div>
+                        <div class="project-card-links">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Project</a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+                -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <h2 class="section-title">Skills & Technologies</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3 class="skill-category-title">Languages</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">C#</span>
+              <span class="skill-tag">Java</span>
+              <!-- Add more languages -->
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-category-title">Frameworks & Libraries</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Unity</span>
+              <!-- Add more frameworks -->
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-category-title">Tools & Platforms</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">AWS</span>
+              <!-- Add more tools -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <p class="about-text">
+            I'm a passionate developer with experience building games,
+            applications, and web projects. I enjoy creating engaging user
+            experiences and solving complex problems through code.
+          </p>
+          <p class="about-text">
+            My work spans game development, web applications, and software
+            engineering. I'm always learning new technologies and exploring
+            innovative ways to build better products.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+          <p class="contact-text">
+            Interested in collaborating or have questions? Feel free to reach
+            out!
+          </p>
+          <div class="contact-links">
+            <a href="mailto:marcus.erlandsson99@gmail.com" class="contact-link">
+              <span class="contact-icon">📧</span>
+              marcus.erlandsson99@gmail.com
+            </a>
+            <a
+              href="https://www.linkedin.com/in/marcus-erlandsson-805042228"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link"
+            >
+              <span class="contact-icon">💼</span>
+              LinkedIn Profile
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-text">
+          &copy; 2025 Marcus Erlandsson. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
