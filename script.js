@@ -63,13 +63,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Scroll to the matching card or fallback to projects section
       if (targetCard) {
-        // Calculate scroll position accounting for fixed nav
+        // Calculate scroll position to center the element on screen
         const navHeight = document.querySelector(".nav").offsetHeight;
-        const elementTop = targetCard.getBoundingClientRect().top;
-        const offsetPosition = elementTop + window.pageYOffset - navHeight;
+        const elementRect = targetCard.getBoundingClientRect();
+        const elementTop = elementRect.top + window.pageYOffset;
+        const elementHeight = elementRect.height;
+        const viewportHeight = window.innerHeight;
+
+        // Center the element vertically in the viewport
+        const centerPosition =
+          elementTop + elementHeight / 2 - viewportHeight / 2;
 
         window.scrollTo({
-          top: Math.max(0, offsetPosition), // Ensure we don't scroll to negative position
+          top: Math.max(0, centerPosition), // Ensure we don't scroll to negative position
           behavior: "smooth",
         });
       } else {
