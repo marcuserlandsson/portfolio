@@ -19,28 +19,6 @@ This portfolio features:
 - `script.js` - Interactive features and smooth scrolling
 - `img/` - Folder for project media (GIFs, videos, images)
 
-## Adding New Projects
-
-1. **Add media to `img/` folder**: Place your project GIF/video in the `img/` folder
-2. **Update the hero grid** in `index.html`:
-   ```html
-   <div class="project-tile">
-     <video class="tile-media" autoplay loop muted playsinline>
-       <source src="img/your-project.mp4" type="video/mp4" />
-     </video>
-     <div class="tile-overlay">
-       <h3 class="tile-title">Your Project Name</h3>
-     </div>
-   </div>
-   ```
-3. **Add a project card** in the projects section with full details
-
-## Customization
-
-- **Skills**: Update the skills section in `index.html` with your technologies
-- **Colors**: Modify CSS variables in `styles.css` (`:root` section)
-- **Content**: Edit the About section and other text content in `index.html`
-
 ## Deployment
 
 This is a static site that can be deployed to:
