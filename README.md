@@ -21,14 +21,9 @@ This portfolio features:
 
 ## Deployment
 
-This is a static site that can be deployed to:
+This portfolio is deployed and live at:
 
-- GitHub Pages
-- Netlify
-- Vercel
-- Any static hosting service
-
-Simply upload the files or connect your repository to the hosting service.
+**🌐 [https://marcuserlandsson.github.io/portfolio/](https://marcuserlandsson.github.io/portfolio/)**
 
 ## Contact
 
@@ -37,6 +32,32 @@ Simply upload the files or connect your repository to the hosting service.
 
 ## Projects
 
-### Fluffy's Revenge Game
+### Rebase Dashboard
+
+Next-generation real-time control center for energy forecasting and trading teams at Rebase Energy. Built with React, Mapbox, Deck.gl, Echarts, Python, and FastAPI.
+
+- [Blog Post](https://www.rebase.energy/blog/2025-10-29-introducing-rebase-dashboard)
+
+### Rebase Map
+
+Interactive map visualization tool for energy forecasting and trading. Real-time geospatial data visualization using React, Mapbox, and Deck.gl.
+
+- [Try it yourself](https://map.rebase.energy)
+
+### LLM Boids
+
+Interactive crowd simulation system combining Reynolds' Boids algorithm with RBF flow fields and natural language control. Extended existing 3D RBF field work by implementing an LLM-driven control layer in Unity.
+
+- [GitHub Repository](https://github.com/sasoder/authoring-RBF-boids-with-LLM)
+
+### Fluffy's Revenge
+
+A 2D roguelike game built in Unity with custom made art and animations. Created as a KTH course project with 4 other students.
 
 - [View on itch.io](https://anakode.itch.io/fluffys-revenge)
+
+### Digosaur
+
+Interactive museum installation at Tekniska Museet (Swedish Museum of Technology) using the Samsung SUR40 table. Custom input processing library, TCP network communication, and real-time particle effects in Godot.
+
+- [GitHub Repository](https://github.com/marcuserlandsson/Digosaur)
