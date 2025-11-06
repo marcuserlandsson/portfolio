@@ -54,14 +54,45 @@ document.addEventListener("DOMContentLoaded", function () {
   const projectTiles = document.querySelectorAll(".project-tile");
   projectTiles.forEach((tile) => {
     tile.addEventListener("click", function () {
-      const projectsSection = document.getElementById("projects");
-      if (projectsSection) {
+      // Get the title from the clicked tile
+      const tileTitleElement = this.querySelector(".tile-title");
+      if (!tileTitleElement) return;
+
+      const tileTitle = tileTitleElement.textContent.trim();
+
+      // Find the matching project card by title
+      const projectCards = document.querySelectorAll(".project-card");
+      let targetCard = null;
+
+      projectCards.forEach((card) => {
+        const cardTitleElement = card.querySelector(".project-card-title");
+        if (
+          cardTitleElement &&
+          cardTitleElement.textContent.trim() === tileTitle
+        ) {
+          targetCard = card;
+        }
+      });
+
+      // Scroll to the matching card or fallback to projects section
+      if (targetCard) {
         const navHeight = document.querySelector(".nav").offsetHeight;
-        const targetPosition = projectsSection.offsetTop - navHeight;
+        const targetPosition = targetCard.offsetTop - navHeight;
         window.scrollTo({
           top: targetPosition,
           behavior: "smooth",
         });
+      } else {
+        // Fallback to projects section if no match found
+        const projectsSection = document.getElementById("projects");
+        if (projectsSection) {
+          const navHeight = document.querySelector(".nav").offsetHeight;
+          const targetPosition = projectsSection.offsetTop - navHeight;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth",
+          });
+        }
       }
     });
   });
