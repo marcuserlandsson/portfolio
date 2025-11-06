@@ -54,32 +54,22 @@ document.addEventListener("DOMContentLoaded", function () {
   const projectTiles = document.querySelectorAll(".project-tile");
   projectTiles.forEach((tile) => {
     tile.addEventListener("click", function () {
-      // Get the title from the clicked tile
-      const tileTitleElement = this.querySelector(".tile-title");
-      if (!tileTitleElement) return;
+      // Get the project ID from the data attribute
+      const projectId = this.getAttribute("data-project");
+      if (!projectId) return;
 
-      const tileTitle = tileTitleElement.textContent.trim();
-
-      // Find the matching project card by title
-      const projectCards = document.querySelectorAll(".project-card");
-      let targetCard = null;
-
-      projectCards.forEach((card) => {
-        const cardTitleElement = card.querySelector(".project-card-title");
-        if (
-          cardTitleElement &&
-          cardTitleElement.textContent.trim() === tileTitle
-        ) {
-          targetCard = card;
-        }
-      });
+      // Find the matching project card by ID
+      const targetCard = document.getElementById(projectId);
 
       // Scroll to the matching card or fallback to projects section
       if (targetCard) {
+        // Calculate scroll position accounting for fixed nav
         const navHeight = document.querySelector(".nav").offsetHeight;
-        const targetPosition = targetCard.offsetTop - navHeight;
+        const elementTop = targetCard.getBoundingClientRect().top;
+        const offsetPosition = elementTop + window.pageYOffset - navHeight;
+
         window.scrollTo({
-          top: targetPosition,
+          top: Math.max(0, offsetPosition), // Ensure we don't scroll to negative position
           behavior: "smooth",
         });
       } else {
@@ -87,9 +77,10 @@ document.addEventListener("DOMContentLoaded", function () {
         const projectsSection = document.getElementById("projects");
         if (projectsSection) {
           const navHeight = document.querySelector(".nav").offsetHeight;
-          const targetPosition = projectsSection.offsetTop - navHeight;
+          const elementTop = projectsSection.getBoundingClientRect().top;
+          const offsetPosition = elementTop + window.pageYOffset - navHeight;
           window.scrollTo({
-            top: targetPosition,
+            top: Math.max(0, offsetPosition),
             behavior: "smooth",
           });
         }
